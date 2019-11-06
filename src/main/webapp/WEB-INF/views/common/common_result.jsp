@@ -15,7 +15,7 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 	
-	alert("<%= msg %>");
+	alert("${msg}");
 	location.href="<%= path %>";
 	
 	

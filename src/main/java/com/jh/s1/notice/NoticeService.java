@@ -14,14 +14,13 @@ public class NoticeService {
 	
 	
 	
-	public void noticeWrite()throws Exception{
-				
-			  
+	public int noticeWrite(NoticeDTO noticeDTO)throws Exception{
+			int result = noticeDAO.noticeWrite(noticeDTO);
+			  return result;
 		
 	}
 	
-	public NoticeDTO noticeSelect()throws Exception{
-		int num = 0;
+	public NoticeDTO noticeSelect(int num)throws Exception{
 		NoticeDTO noticeDTO = noticeDAO.noticeSelect(num);
 		return noticeDTO;
 		

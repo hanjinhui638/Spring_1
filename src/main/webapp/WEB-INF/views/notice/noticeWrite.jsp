@@ -27,13 +27,10 @@
       <label for="contents">CONTENTS:</label>
     <div class="form-group">    
       <textarea rows="10" cols="160" name = "contents"></textarea>
-    </div>
-        
+    </div>     
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
 </div>
-	
-	
 	
 	
 	<form action="./noticeWrite" method="post">
