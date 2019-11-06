@@ -19,22 +19,7 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	
-	@RequestMapping("/notice/noticeWrite") /* 이 주소가 올때 메서드 실행 */
-	public String noticeWrite() {
-		return "notice/noticeWrite";
-	}
-	
-	@RequestMapping("/notice/noticeSelect")
-	public String noticeSelect() {
-		return "notice/noticeSelect";
-		
-	}
-	
-	@RequestMapping("/notice/noticeList")
-	public String noticeList() {
-		return "notice/noticeList";	
-	}
+
 	
 	@RequestMapping("/test")
 	public String test() {
