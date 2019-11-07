@@ -13,11 +13,12 @@
 		
 		</bean>
 		
-		<!-- 		connection과 sql 연결 -->
+		<!-- 	connection과 sql 연결 -->
 		<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactoryBean">
 			<property name="dataSource" ref="dataSource"></property>
 			<property name="mapperLocations" value="classpath:/mybatis/mappers/*Mapper.xml"></property>
 		</bean>
+		
 		
 		<bean class = "org.mybatis.spring.SqlSessionTemplate" id="sqlSession"> 
 			<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactoryBean"></constructor-arg>
