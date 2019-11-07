@@ -8,11 +8,14 @@ public class NoticeService {
 	
 	private NoticeDAO noticeDAO;
 	
-	public NoticeService() {
-			this.noticeDAO = new NoticeDAO();
+	
+	
+	
+	
+	public void setNoticeDAO(NoticeDAO noticeDAO) {
+		this.noticeDAO = noticeDAO;
 	}
-	
-	
+
 	
 	public int noticeWrite(NoticeDTO noticeDTO)throws Exception{
 			int result = noticeDAO.noticeWrite(noticeDTO);

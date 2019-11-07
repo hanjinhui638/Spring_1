@@ -1,16 +1,11 @@
 package com.jh.s1;
 
 import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+import javax.inject.Inject;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.jh.s1.notice.NoticeDTO;
 import com.jh.s1.notice.NoticeService;
 
@@ -18,12 +13,14 @@ import com.jh.s1.notice.NoticeService;
 @RequestMapping("/notice/**")
 
 public class NoticeController {
-
+	
+	
+	@Inject
 	private NoticeService noticeService;
 
-	public NoticeController() {
-		noticeService = new NoticeService();
-	}
+	
+	
+	
 	// /notice/sub/noticeUpdate
 
 	
@@ -31,8 +28,8 @@ public class NoticeController {
 	 * //noticeWrite Post(데이터전송)
 	 * 
 	 * @RequestMapping(value = "noticeWrite", method = RequestMethod.POST) 
-	 * 파라미터이름과noticeDTO이름 일치 getter setter있어야함 public String noticeWrite(NoticeDTO
-	 * noticeDTO) {  return "redirect:./noticeList";
+	 * public String noticeWrite(NoticeDTO, noticeDTO) {  
+	 * return "redirect:./noticeList";
 	 */
 
 	/*
@@ -48,7 +45,6 @@ public class NoticeController {
 	 * System.out.println(noticeDTO.getReg_date());
 	 */
 	/* return "notice/noticeList"; */
-
 	//}
 
 	// noticeWrite GET(페이지이동 글작성화면) 					
