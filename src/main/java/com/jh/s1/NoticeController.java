@@ -52,7 +52,7 @@ public class NoticeController {
 	//}
 
 	// noticeWrite GET(페이지이동 글작성화면) 					
-	@RequestMapping(value = "noticeWrite", method = RequestMethod.GET) /* 이 주소가 올때 메서드 실행 */
+	@RequestMapping(value = "noticeWrite", method = RequestMethod.GET, params = {"num=1, name=iu, age"}) /* 이 주소가 올때 메서드 실행 */
 	public String noticeWrite() {
 		return "notice/noticeWrite";
 	}
@@ -72,12 +72,8 @@ public class NoticeController {
 	// selectone
 
 	/*
-	 * @RequestMapping(value = "noticeSelect", method = {RequestMethod.GET,
-	 * RequestMethod.POST} ) public Model noticeSelect(Model
-	 * model,@RequestParam(value = "n", required = false, defaultValue = "1") int
-	 * num) {
-	 * 
-	 * 
+	 * @RequestMapping(value = "noticeSelect", method = {RequestMethod.GET,RequestMethod.POST} ) 
+	 * public Model noticeSelect(Model model,@RequestParam(value = "n", required = false, defaultValue = "1") int num) { 
 	 * System.out.println(num); String data = "Notice Data";
 	 * model.addAttribute("data", data);
 	 * 
