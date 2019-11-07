@@ -7,10 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
 import com.jh.util.DBConnector;
 
+@Scope("prototype")
 @Repository
 @Qualifier("n1")
 public class NoticeDAO {
