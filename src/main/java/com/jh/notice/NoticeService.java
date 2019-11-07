@@ -1,17 +1,18 @@
-package com.jh.s1.notice;
+package com.jh.notice;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Service;
+
+@Service
 public class NoticeService {
 
 	/* noticeservice는 dao객체 필요 */
 	
+	@Inject
 	private NoticeDAO noticeDAO;
-	
-	public NoticeService() {
-			this.noticeDAO = new NoticeDAO();
-	}
-	
 	
 	
 	public int noticeWrite(NoticeDTO noticeDTO)throws Exception{

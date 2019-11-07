@@ -1,4 +1,4 @@
-package com.jh.s1.notice;
+package com.jh.notice;
 
 import java.sql.Date;
 
