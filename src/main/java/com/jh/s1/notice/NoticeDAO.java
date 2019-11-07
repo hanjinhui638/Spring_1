@@ -6,8 +6,13 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
+
 import com.jh.util.DBConnector;
 
+@Repository
+@Qualifier("n1")
 public class NoticeDAO {
 	
 	public int noticeWrite(NoticeDTO noticeDTO)throws Exception{

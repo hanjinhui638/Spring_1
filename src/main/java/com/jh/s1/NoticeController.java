@@ -2,13 +2,12 @@ package com.jh.s1;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+import javax.inject.Inject;
+
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.jh.s1.notice.NoticeDTO;
@@ -18,12 +17,10 @@ import com.jh.s1.notice.NoticeService;
 @RequestMapping("/notice/**")
 
 public class NoticeController {
-
+	
+	@Inject
 	private NoticeService noticeService;
 
-	public NoticeController() {
-		noticeService = new NoticeService();
-	}
 	// /notice/sub/noticeUpdate
 
 	
