@@ -14,14 +14,14 @@
 <div class="container">
   <h2>Notice Select Page</h2>
   <ul class="list-group">
-    <li class="list-group-item">Title : ${requestScope.noticeDTO.title} </li>
-    <li class="list-group-item">Writer : ${requestScope.noticeDTO.writer} </li>
-    <li class="list-group-item">DATE : ${requestScope.noticeDTO.reg_date}</li>
-    <li class="list-group-item">HIT : ${requestScope.noticeDTO.hit} </li>
+    <li class="list-group-item">Title : ${noticeVO.title} </li>
+    <li class="list-group-item">Writer : ${noticeVO.writer} </li>
+    <li class="list-group-item">DATE : ${noticeVO.reg_date}</li>
+    <li class="list-group-item">HIT : ${noticeVO.hit} </li>
   </ul>
-   <p>CONTENTS: ${requestScope.noticeDTO.contents} </p>
+   <p>CONTENTS: ${noticeVO.contents} </p>
 	<div id="box">
-		<a class = "btn btn-primary" href="./noticeUpdate?num=${requestScope.noticeDTO.num}">Update</a>
+		<a class = "btn btn-primary" href="./noticeUpdate?num=${noticeVO.num}">Update</a>
 		
 	
 	<%-- <%if(memberDTO !=null && memberDTO.getId().equals(noticeDTO.getWriter())) {%>
